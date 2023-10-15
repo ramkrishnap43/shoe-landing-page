@@ -1,0 +1,85 @@
+
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .logos {
+    overflow: hidden;
+    padding: 60px 0;
+    background: white;
+    white-space: nowrap;
+    position: relative;
+    
+    
+  }
+  
+  .logos:before,
+  .logos:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 1;
+  }
+  
+  .logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  }
+  
+  .logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  }
+  
+  .logos:hover .logos-slide {
+    animation-play-state: paused;
+  }
+  
+  .logos-slide {
+    
+    display: inline-block;
+    animation: 4s slide linear infinite;
+    cursor: pointer;
+  }
+  
+  .logos-slide img {
+    height: 150px;
+    margin: 0 40px;
+  }
+  .logos-slide p{
+    margin-left: 42px;
+    margin-top: 5px;
+  }
+  @media (max-width : 1110px){
+    .logos {
+      margin-top: 250px;
+    }
+  }
+  @media (max-width : 940px){
+    .logos {
+      margin-top: 350px;
+    }
+  }
+  @media (max-width : 768px){
+    .logos {
+      margin-top: 1450px;
+    }
+  }
+  @media (max-width : 600px){
+    .logos {
+      margin-top: 1050px;
+    }
+  }
+  @media (max-width : 370px){
+    .logos {
+      margin-top: 650px;
+    }
+  }
